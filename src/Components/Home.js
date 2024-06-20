@@ -24,7 +24,7 @@ export default function Home() {
       try{
         const response  = await axios.get(getAllProjects);
         if(response.data){
-          console.log(response.data);
+          
           setProjects(response.data.project);
         }
         else{
