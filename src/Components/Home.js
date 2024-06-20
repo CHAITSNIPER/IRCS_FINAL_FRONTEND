@@ -5,14 +5,14 @@ import '../all.css'
 import { getAllProjects } from '../utils/API-routes'
 import { UserContext } from './context/UserContext'
 import blood from './images/bloodDon.png'
+import floodR from './images/floodR.png'
 import map from './images/map.png'
-import menstru from './images/menstru.png'
 
 
 export default function Home() {
   const mapLink = `https://www.google.com/maps/place/Indian+Red+Cross+Society+-+Mumbai/@18.9752117,72.8238875,15z/data=!4m6!3m5!1s0x3be7ce5e060702c3:0x20c37cd578dbf1a8!8m2!3d18.9752117!4d72.8238875!16s%2Fg%2F11gdcyt4yd?entry=ttu`
 
-   const array  = [blood,menstru];
+   const array  = [blood,floodR];
    const { token } = useContext(UserContext);
    const navigate = useNavigate();
    const [currentIndex,setCurrentIndex] = useState(0);
