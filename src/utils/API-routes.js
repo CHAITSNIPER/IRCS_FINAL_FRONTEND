@@ -1,4 +1,4 @@
-export const host = `http://127.0.0.1:4000`;
+export const host = `https://ircsbackend.onrender.com`;
 export const postProjects = `${host}/authenticateRoute/postProjects`;
 export const getAllProjects = `${host}/projects/getAllProjects`;
 export const getSelectedProject = (id) =>`${host}/projects/getSelectedProjects/${id}`;
