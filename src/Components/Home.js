@@ -7,6 +7,7 @@ import { UserContext } from './context/UserContext'
 import blood from './images/bloodDon.png'
 import floodR from './images/floodR.png'
 import map from './images/map.png'
+import Loading from './securit/loading'
 
 
 export default function Home() {
@@ -64,11 +65,11 @@ export default function Home() {
     <section className="projects">
       <h1>OUR PROJECTS</h1>
          <section className="projectArray">
-              {projects.map((items,index)=>(
+              {projects.length > 0 ? (projects.map((items,index)=>(
                    <nav key = {index} className="eachProj">
                <button className='ProjectButtons' onClick={()=>{navigate(`/projects/${items._id}`)}}>{items.title}</button>
                   </nav>
-       ))}
+       ))) :<section> <Loading/> <nav className='bo'>loading projects</nav></section>}
       </section>
     </section>
 
