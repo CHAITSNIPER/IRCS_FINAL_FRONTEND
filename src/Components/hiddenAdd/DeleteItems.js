@@ -7,6 +7,7 @@ import { UserContext } from '../context/UserContext';
 export default function DeleteItems() {
     const [projs,getProjs] = useState([]);
     const { token } = useContext(UserContext);
+    const [loading,setLoading] = useState(false);
     const navigate=useNavigate();
     if(!token){
         navigate('/login');
@@ -26,6 +27,7 @@ export default function DeleteItems() {
     }
 
     const handleDelete = async(id)=>{
+        setLoading(true);
         try{
             const response = await axios.delete(DeleteProject(id),{
                 headers:{
@@ -35,13 +37,16 @@ export default function DeleteItems() {
             if(response.data.status){
                 console.log('item deleted success');
                 getProjs(projs.filter(proj => proj._id !== id));
+                setLoading(false);
             }
             else{
                 console.log('item not deleted');
+                setLoading(false);
             }
         }
         catch(error){
             console.log('error',error);
+            setLoading(false);
         }
     }
 
@@ -50,9 +55,11 @@ export default function DeleteItems() {
     },[]);
   return (
     <div className='deletes'>
+        
        {projs.map((projects,index)=>(
          <nav key={index}>{projects.title}<button onClick={()=>handleDelete(projects._id)}>Delete</button><br></br></nav>
        ))}
+       {loading ? (<nav>Deleting item...</nav>) : ''}
     </div>
   )
 }

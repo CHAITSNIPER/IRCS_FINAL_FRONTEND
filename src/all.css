@@ -303,14 +303,29 @@ td{
 }
 .adminToggle{
     position: absolute;
-    top: 22%;
+    top: 40%;
     left: 28%;
     margin: 20px 20px 20px 20px;
+    padding: 30px 30px 30px 30px;
+    background-color: red;
+    border-radius: 2rem;
+}
+.adminToggle:hover{
+    background-color: rgb(10, 9, 9);
+    color: white;
+    cursor: pointer;
 }
 .adminToggle2{
     position: absolute;
     top: 20%;
     left: 30%;
+    padding: 30px 30px 30px 30px;
+    border-radius: 2rem;
+}
+.adminToggle2:hover{
+    background-color: rgb(10, 9, 9);
+    color: white;
+    cursor: pointer;
 }
 .instaIcon{
     width: 10%;
@@ -370,4 +385,14 @@ td{
 }
 .bo{
     background-color: red;
+}
+.fe{
+    align-items: center;
+    position: absolute;
+    left:47%;
+    top: 38%;
+}
+.proadd{
+    width: 40%;
+    text-align: center;
 }

@@ -3,12 +3,15 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SearchedDonatorDeets, donDetails, postProjects } from '../../utils/API-routes';
 import { UserContext } from '../context/UserContext';
+import Loading from '../securit/loading';
 
 
 export default function AddProjects() {
     const { token } = useContext(UserContext);
     const [donateDetails,setDonDetails] = useState([]);
     const [searchBar,setSearchBar] = useState('');
+    const [loading,setLoading] = useState(false);
+    const [loading2,setLoading2] = useState(false);
     const navigate = useNavigate();
     useEffect(()=>{
         if(!token) navigate('/login');
@@ -30,7 +33,10 @@ export default function AddProjects() {
     };
 
     const handleSubmit = async (e) => {
+        
         e.preventDefault();
+
+        setLoading(true);
 
         if (validate()) {
             const { title, description } = inputs;
@@ -45,12 +51,16 @@ export default function AddProjects() {
                 });
 
                 if (response.data) {
+                    setLoading(false);
                     console.log('Project added successfully:', response.data);
                     alert('project added!');
+
                 } else {
+                    setLoading(false);
                     console.log('No data returned');
                 }
             } catch (error) {
+                setLoading(false);
                 console.error('Error adding project:', error);
             }
         } else {
@@ -83,32 +93,36 @@ export default function AddProjects() {
             fetchDeets();
             return;
         }
+        setLoading2(true);
         try{
             
             const response = await axios.get(SearchedDonatorDeets(value));
 
             if(response.data.status){
                 setDonDetails(response.data.donator);
+                setLoading2(false);
             }
             else{
                 console.log('error fetching');
+                setLoading2(false);
             }
         }catch(error){
             console.log('error',error);
+            setLoading(false);
         }
     }
    
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            {loading ? <nav className='fe'><Loading/></nav> : (<form className='proadd' onSubmit={handleSubmit}>
                 <h1>Add Projects </h1>
             <label>Title: </label>
             <input type="text" name="title" onChange={handleChange} /><br /><br />
             <label>Description: </label>
-                <textarea name="description" rows = "15" cols= "15" onChange={handleChange}></textarea><br /><br />
+                <textarea name="description" rows = "15" cols= "50" onChange={handleChange}></textarea><br /><br />
                 <button type="submit">Submit</button>
-            </form><br></br>
+            </form>)}<br></br>
            <div className='dondets'>
             <h1>Donators details</h1>
             <input type="text" className = "searchDon" onChange={handleSearchBar} placeholder='search donator'/>
@@ -119,7 +133,7 @@ export default function AddProjects() {
                     </tr>
                 </thead>
                 <tbody>
-                    {donateDetails.map((donator,index)=>(
+                    {loading2 ? <Loading/>:(donateDetails.map((donator,index)=>(
                         <tr key={index}>
                             <td>{donator.firstname}</td>
                             <td>{donator.lastname}</td>
@@ -127,7 +141,7 @@ export default function AddProjects() {
                             <td>{donator.phone_number}</td>
                             <td>{donator.time}</td>
                             <td>{donator.amount}</td>
-                        </tr>
+                        </tr>)
                     ))}
                 </tbody>
                </table>
