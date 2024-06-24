@@ -66,6 +66,7 @@ export default function Donate() {
 
      }catch(error){
          console.log('error',error);
+         
      }
   }else{
     alert('form not submitted');
