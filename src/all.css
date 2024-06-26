@@ -1,398 +1,275 @@
 body {
-    display: flex;
-    position: inherit;
-    overflow-y: auto; 
-    overflow-x: hidden;
-    height: 100%; 
-    max-height: 100%;
-    background-color: rgb(54, 54, 54);
-}
-body::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 3px;
-}
-
-form{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    color:rgb(15, 12, 12);
-    background-color: rgb(197, 43, 43);
-    padding: 30px 30px 30px 30px;
-    border-radius: 1rem;
-}
-input{
-    border-radius: 1rem;
-    background-color: rgb(215, 209, 209);
-}
-textarea{
-    border-radius: 1rem;
-    background-color:  rgb(215, 209, 209);
-}
-.headings{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: black;
-    opacity: 0.7;
-    padding: 5px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 4px 2px -2px gray;
-    z-index: 1000;
-}
-.links{
-    color: rgb(18, 223, 255);
-}
-.links:hover{
-    color:red;
-}
-.imageTo{
-    box-sizing: inherit;
-    height: 50px;
-}
-.logo{
-    height: 100%;
-    width:120%;
-    position: relative;
-    right: 33%
-}
-.pages{
-    padding-top: 60px;
-}
-.slideShow-container{
-  top: 3rem;
-  left:4rem;
-  padding: 20px 10px 10px 20px;
-  position: absolute;
-  width: 100%;
-  height: 70%;
-  margin: auto;
-}
-.image-slide{
-  width: 100%;
-  height: 120%;
-  display: block;
-  transition: left 0.5s ease;
-  object-fit: cover;
-  position: absolute;
-  left: -6%;
-  top: -11%;
-}
-.image-slide.active {
-    left: 0
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
   }
-.quote{
-    position: absolute;
-    background-color:rgb(54, 54, 54);
-    color:white;
-    padding: 30px 30px 30px 30px;
-    border-radius: 3rem;
-    left:4%;
-    top: 110%;
-    width: 40%;
-    height: 30%;
-    font-weight: 800;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: italic;
-    z-index: 450;
-    box-shadow:  0 0 10px rgba(190, 177, 177, 0.3)
-}
-.highl{
-    color:red;
-}
-.projects{
-    position: absolute;
-    left : 15%;
-    top: 70%;
-}
-.Project-details {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px;
-    width: 80%; 
-    max-height: 70%;
-    overflow-y: auto; 
-    background-color: #ffc4c4; 
-    color: rgb(55, 44, 44);
-    border: 1px solid #ccc;
-    border-radius: 8px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-
-}
-.projects-details p{
-    padding: 5px;
-    max-height: 500px;
-}
-.ProjectDeets{
-    max-height: 500px;
-    overflow-y: scroll;
-}
-.eachProj{
-    padding:15px 20px 15px 20px;
-}
-
-.projectArray {
-    background-color: rgb(255, 0, 0);
-    border-radius: 0.5rem;
-}
-.projects{
-    position: absolute;
-    left: 17%;
-    width: 60%;
-    background-color: red;
-    padding: 30px 30px 30px 30px;
-    top:165%;
-    text-align: center;
-    border-radius: 1rem;
-    z-index: 200px;
-    font-weight: 800;
-    box-shadow: 0 0 20px 0 rgb(114, 114, 114);
-}
-
-.ProjectButtons{
-    padding: 20px 20px 20px 20px;
-    background-color: rgb(255, 255, 255);
-    font-weight: 800;
-    width:100%;
-}
-.ProjectButtons:hover{
-   background-color: black;
-   color:  rgb(247, 169, 169);
-   cursor: pointer;
-}
-.map{
-    width:100%;
-    height: auto;
-    position: absolute;
-    top: 270%;
-    right: -0.4%;
-    padding: 5px 5px 5px 5px;
-    
-    font-weight: 800;
-    color:rgb(5, 4, 4);
-    background-color: red;
-    z-index: 200px;
-    box-shadow: 0 0 20px 0 rgb(114, 114, 114);
-    text-align: center;
-}
-.IRCSMAP{
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Slideshow styles */
+  .slideShow-container {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  .image-slide {
     width: 100%;
-    height: 85%;
-    
-}
-.headMap{
-    position: relative;
-    left: 35%;
-    height: auto;
-}
-.donationForm{
-    background-color: red;
-    color: black;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 30%;
-    position: absolute;
-    top:34rem;
-    padding: 0px 25px 25px 25px;
-    font-weight: 700;
-    overflow-y: auto;
-    height: 870px;
-    padding: auto;
-    box-shadow: 0 0 10px 0 rgb(104, 103, 103);
-}
-.donInputs{
-    position: relative;
-    display: flex;
-    width: 370px;
-    height: 20px;
-}
-.clicked{
-    color:rgb(255, 0, 0);
-    background-color: rgb(213, 211, 211);
-    padding: 15px 8px 19px 8px;
-    font-weight: 500;
-    border-radius: 0.25rem;
-}
-.unclicked{
-    color:aquamarine;
-    transition: 200ms;
-}
-.unclicked:hover{
-    color:pink;
-}
-.dondets{
-    position:absolute;
-    top: 34rem;
-    left: 19%;
-    background-color: pink;
-    padding: 20px 20px 20px 20px;
-    border-radius: 1rem;
-}
-.lineBr{
-    color: black;
-    width: 350px;
-    height: 2px;
-    background-color: black;
-}
-table{
-    border:2px;
-}
-th{
-    padding: 5px;
-    border: 1px solid black;
-}
-td{
-    padding: 5px;
-    border: 1px solid red;
-}
-.donate{
-    background-color: red;
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    width: 35%;
-    height: auto;
-    padding: 20px 20px 20px 20px;
-    border-radius: 3rem;
-    z-index: 200;
-    box-shadow: 0 0 10px 0 rgb(111, 111, 111);
-    position: absolute;
-    right: 5%;
-    top: 110%;
-
-}
-.donateButton{
-    position: relative;
-    left: 33%;
-    padding: 20px 20px 20px 20px;
-    font-weight: 700;
-    background-color: rgb(255, 206, 12);
-    color: rgb(0, 0, 0);
-    border-radius: 1rem;
-}
-.donateButton:hover{
-    background-color: black;
-    color: rgb(255, 206, 12);
-    cursor:pointer;
-}
-.deletes{
-    position: absolute;
-    left: 26rem;
-    top: 15rem;
-    background-color: red;
-    padding: 20px 20px 20px 20px;
-    border-radius: 1rem;
-}
-.donate-submit{
-    position: absolute;
-    left:42%;
-    padding: 20px 20px 20px 20px;
-    background-color: rgb(128, 128, 251);
-    border-radius: 1rem;
-}
-.donate-submit:hover{
-   background-color: rgb(16, 15, 15);
-   color:white;
-   cursor:pointer;
-}
-.adminToggle{
-    position: absolute;
-    top: 40%;
-    left: 28%;
-    margin: 20px 20px 20px 20px;
-    padding: 30px 30px 30px 30px;
-    background-color: red;
-    border-radius: 2rem;
-}
-.adminToggle:hover{
-    background-color: rgb(10, 9, 9);
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Quote styles */
+  .quote {
+    background-color: #e74c3c;
     color: white;
-    cursor: pointer;
-}
-.adminToggle2{
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    padding: 30px 30px 30px 30px;
-    border-radius: 2rem;
-}
-.adminToggle2:hover{
-    background-color: rgb(10, 9, 9);
-    color: white;
-    cursor: pointer;
-}
-.instaIcon{
-    width: 10%;
-    border-radius: 1rem;
-}
-.error{
-    font-weight: 700;
-    position: relative;
-    top: 6%;
-    color: rgb(0, 0, 0);
-}
-.Buttons{
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    background-color: red;
-    padding: 20px 20px 20px 20px;
-    border-radius: 2rem;
-}
-.Button{
-    background-color: white;
-    color:black;
-    padding: 20px 20px 20px 20px;
-    margin: 20px 20px 20px 20px;
-    border-radius: 0.5rem;
-    transition: 300ms;
-}
-.Button:hover{
-    background-color: red;
-    color:white;
-    cursor:pointer;
-}
-.loads{
-    background-color: rgb(255, 0, 0);
-}
-.loading-Cont{
-    display: flex;
-    align-items: center;
-    background-color: red;
-}
-.spin{
-    border: 8px solid white;
-    border-left-color: #000000;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}
-.bo{
-    background-color: red;
-}
-.fe{
-    align-items: center;
-    position: absolute;
-    left:47%;
-    top: 38%;
-}
-.proadd{
-    width: 40%;
+    padding: 30px;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 40px 0;
+  }
+  
+  .highl {
+    color: #f1c40f;
+    font-size: 1.7rem;
+  }
+  
+  /* Projects section styles */
+  .projects {
+    background-color: white;
+    padding: 50px 0;
+  }
+  
+  .projects h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  
+  .projectArray {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .eachProj {
+    flex-basis: calc(33.333% - 20px);
+  }
+  
+  .ProjectButtons {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ProjectButtons:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Donate section styles */
+  .donate {
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .donate h1 {
+    margin-bottom: 20px;
+  }
+  
+  .donate p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  
+  .donateButton {
+    padding: 15px 30px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .donateButton:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Map section styles */
+  .map {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .IRCSMAP {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .map p, .map nav {
+    color: #7f8c8d;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .eachProj {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .eachProj {
+      flex-basis: 100%;
+    }
+  }
+
+  /*Navigation Bar*/
+
+  .headings {
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageTo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
+  }
+  
+  .headings a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .headings a:not(.imageTo):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .clicked {
+    background-color: #e74c3c;
+    color: white !important;
+  }
+  
+  .unclicked {
+    color: #ecf0f1;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .headings {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .imageTo {
+      margin-bottom: 15px;
+    }
+  
+    .headings a:not(.imageTo) {
+      margin-bottom: 10px;
+    }
+  }
+
+  /*Project details*/
+
+  .Project-details {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Project-details h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 15px;
+}
+
+.Project-details p {
+  color: #34495e;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .Project-details {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .Project-details h1 {
+    font-size: 2rem;
+  }
+
+  .Project-details p {
+    font-size: 1rem;
+  }
+}
+
+/* Add some visual interest with a subtle gradient background */
+.Project-details {
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+}
+
+/* Style for links within the description, if any */
+.Project-details p a {
+  color: #e74c3c;
+  text-decoration: none;
+  border-bottom: 1px dotted #e74c3c;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.Project-details p a:hover {
+  color: #c0392b;
+  border-bottom-color: #c0392b;
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import '../all.css';
+import '../donate.css';
 import { postDonators } from '../utils/API-routes';
 import { UserContext } from './context/UserContext';
 

@@ -1,0 +1,87 @@
+.donationForm {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .donationForm h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .donationForm p {
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .donationForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+    font-weight: bold;
+  }
+  
+  .donInputs, .number {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .number {
+    width: calc(100% - 22px); /* Adjust for padding */
+  }
+  
+  .donate-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .donate-submit:hover {
+    background-color: #c0392b;
+  }
+  
+  .error {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .donationForm {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    .donationForm h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Add some visual interest */
+  .donationForm {
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+  }
+  
+  /* Focus styles for inputs */
+  .donInputs:focus, .number:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
