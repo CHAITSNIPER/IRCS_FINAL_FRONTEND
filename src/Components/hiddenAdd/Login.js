@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../all.css';
 import { authorizeUser } from '../../utils/API-routes';
 import { UserContext } from '../context/UserContext';
 import Loading from '../securit/loading';
+import './hidden.css';
 
 export default function Login() {
     const navigate = useNavigate();
@@ -44,16 +44,23 @@ export default function Login() {
       setValues({...values,[name]:value});
     }
   return (
-    <div>
-            {loading ? (
-                <nav className='fe'><Loading /></nav> // Render the Loading component when loading state is true
-            ) : (
-                <form onSubmit={handleSubmit}>
-                    <label>UserName: </label> <input type="text" name="username" onChange={handleChange} /><br /><br />
-                    <label>Password:</label> <input type="password" name="password" onChange={handleChange} /><br /><br />
-                    <button type="submit">Submit</button>
-                </form>
-            )}
+    <div className="login-container">
+    {loading ? (
+      <nav className='fe'><Loading /></nav>
+    ) : (
+      <form onSubmit={handleSubmit} className="login-form">
+        <h2>Welcome</h2>
+        <div className="input-group">
+          <input type="text" name="username" id="username" onChange={handleChange} required />
+          <label htmlFor="username">Username</label>
         </div>
+        <div className="input-group">
+          <input type="password" name="password" id="password" onChange={handleChange} required />
+          <label htmlFor="password">Password</label>
+        </div>
+        <button type="submit" className="submit-btn">Log In</button>
+      </form>
+    )}
+  </div>
   )
 }
