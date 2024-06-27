@@ -112,14 +112,31 @@ export default function AddProjects() {
         }
     }
    
+    const handleDownload = ()=>{
+        const csvContent = "data:text/csv;charset=utf-8," 
+            + ["FirstName,LastName,Email,Phone,Time,Amount", 
+                ...donateDetails.map(d => 
+                    `${d.firstname},${d.lastname},${d.email},${d.phone_number},${d.time},${d.amount}`
+                )
+            ].join("\n");
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "donor_details.csv");
+            document.body.appendChild(link);
+    
+            link.click();
+    }
 
     return (
-        <div>
-            {loading ? <nav className='fe'><Loading/></nav> : (<form className='proadd' onSubmit={handleSubmit}>
-                <h1>Add Projects </h1>
-            <label>Title: </label>
+        <div className='add-Container'>
+            {loading ? <nav className='fe'><Loading/></nav> : (
+                <form className='proadd' onSubmit={handleSubmit}>
+                <h1>Add Projects </h1><br/>
+            <label className='fields'>Title: </label>
             <input type="text" name="title" onChange={handleChange} /><br /><br />
-            <label>Description: </label>
+            <label className='fields'>Description: </label>
                 <textarea name="description" rows = "15" cols= "50" onChange={handleChange}></textarea><br /><br />
                 <button type="submit">Submit</button>
             </form>)}<br></br>
@@ -146,7 +163,7 @@ export default function AddProjects() {
                 </tbody>
                </table>
            </div>
-
+         <button className='download' onClick={handleDownload}>Download in csv</button>
         </div>
     );
 }
