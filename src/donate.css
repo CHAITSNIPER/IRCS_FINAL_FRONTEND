@@ -5,6 +5,7 @@
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Noto Sans",Arial,Helvetica,sans-serif;
   }
   
   .donationForm h1 {
@@ -12,12 +13,14 @@
     font-size: 2.5rem;
     margin-bottom: 10px;
     text-align: center;
+    font-family: "Noto Sans",Arial,Helvetica,sans-serif;
   }
   
   .donationForm p {
     color: #7f8c8d;
     text-align: center;
     margin-bottom: 20px;
+    font-family: "Noto Sans",Arial,Helvetica,sans-serif;
   }
   
   .donationForm label {
@@ -25,6 +28,7 @@
     margin-bottom: 5px;
     color: #34495e;
     font-weight: bold;
+    font-family: "Noto Sans",Arial,Helvetica,sans-serif;
   }
   
   .donInputs, .number {
@@ -34,6 +38,7 @@
     border: 1px solid #bdc3c7;
     border-radius: 5px;
     font-size: 1rem;
+    font-family: "Noto Sans",Arial,Helvetica,sans-serif;
   }
   
   .number {
@@ -50,6 +55,7 @@
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: "Noto Sans",Arial,Helvetica,sans-serif;
   }
   
   .donate-submit:hover {
@@ -85,3 +91,6 @@
     border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
   }
+  /*font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+    font-weight: 800;*/
+    

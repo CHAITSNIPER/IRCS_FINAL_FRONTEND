@@ -14,6 +14,7 @@ import ProjectDeets from './projectFolder/ProjectDeets.js';
 function App() {
   return (
    <div className="Page">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet"/>
     <UserProvider>
     <Router>
     <LookAround />

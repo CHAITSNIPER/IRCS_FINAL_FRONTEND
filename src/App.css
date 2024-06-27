@@ -1,11 +1,13 @@
 .App {
   text-align: center;
   height:auto;
+  font-family: "Noto Sans",Arial,Helvetica,sans-serif;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  font-family: "Noto Sans",Arial,Helvetica,sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -23,6 +25,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "Noto Sans",Arial,Helvetica,sans-serif;
 }
 
 .App-link {

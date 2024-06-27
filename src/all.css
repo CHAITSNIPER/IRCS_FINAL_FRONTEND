@@ -1,153 +1,212 @@
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: #e41e26;
+  color: white;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.image-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.text-slide {
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.header1InImage{
+  margin-top: -30px;
+  margin-bottom: -25px;
+  padding-bottom: 0.25rem;
+  
+}
+.header2InImage{
+  margin-top: -25px;
+  margin-bottom: -25px;
+  padding-bottom: 0.25rem;
+  
+}
+.paraInImage{
+  margin-top: -25px;
+  padding-bottom: 0.25rem;
+  
+}
+
+/* Quote Section */
+.quote {
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.highl {
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+  color: #e41e26;
+  font-weight: bold;
+}
+
+/* Projects Section */
+.projects {
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+  padding: 2rem 0;
+}
+
+.projects h1 {
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectArray {
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ProjectButtons {
+  background-color: #e41e26;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+}
+
+.ProjectButtons:hover {
+  background-color: #c41820;
+}
+
+/* Donate Section */
+.donate {
+  background-color: red;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+}
+
+.donate h1 {
+  margin-bottom: 1rem;
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+}
+
+.donate p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+}
+
+.donateButton {
+  background-color: white;
+  color: #28a745;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+}
+
+.donateButton:hover {
+  background-color: #f4f4f4;
+}
+
+/* Map Section */
+.map {
+  padding: 3rem 0;
+  text-align: center;
+  font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+  font-weight: 800;
+}
+
+.IRCSMAP {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-slide {
+    font-size: 1.8rem;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Slideshow styles */
-  .slideShow-container {
-    position: relative;
-    height: 60vh;
-    overflow: hidden;
-  }
-  
-  .image-slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  /* Quote styles */
   .quote {
-    background-color: #e74c3c;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 40px 0;
-  }
-  
-  .highl {
-    color: #f1c40f;
-    font-size: 1.7rem;
-  }
-  
-  /* Projects section styles */
-  .projects {
-    background-color: white;
-    padding: 50px 0;
-  }
-  
-  .projects h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
-  }
-  
-  .projectArray {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .eachProj {
-    flex-basis: calc(33.333% - 20px);
-  }
-  
-  .ProjectButtons {
-    width: 100%;
-    padding: 15px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .ProjectButtons:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Donate section styles */
-  .donate {
-    background-color: #2ecc71;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .donate h1 {
-    margin-bottom: 20px;
-  }
-  
-  .donate p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-  }
-  
-  .donateButton {
-    padding: 15px 30px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
     font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  
-  .donateButton:hover {
-    background-color: #c0392b;
-  }
-  
-  /* Map section styles */
-  .map {
-    background-color: white;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .IRCSMAP {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .map h1 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .map p, .map nav {
-    color: #7f8c8d;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .eachProj {
-      flex-basis: calc(50% - 20px);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .eachProj {
-      flex-basis: 100%;
-    }
-  }
+}
 
   /*Navigation Bar*/
 
@@ -161,7 +220,9 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+    font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
+    font-weight: 1000;
+    }
   
   .imageTo {
     display: flex;
@@ -169,7 +230,7 @@ body {
   }
   
   .logo {
-    height: 40px;
+    height: 30px;
     width: auto;
     margin-right: 20px;
   }
@@ -212,7 +273,10 @@ body {
       margin-bottom: 10px;
     }
   }
-
+.igIcon{
+  height: 30px;
+  padding: 5px 5px;
+}
   /*Project details*/
 
   .Project-details {
