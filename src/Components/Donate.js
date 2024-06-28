@@ -5,6 +5,7 @@ import { postDonators } from '../utils/API-routes';
 import { UserContext } from './context/UserContext';
 
 
+
 export default function Donate() {
 
   const [values,setValues] = useState({});
@@ -77,13 +78,13 @@ export default function Donate() {
       <form className="donationForm" onSubmit={handleSubmit}>
         <h1>DONATIONS</h1><br/>
         <p>Fill the form below</p><br/>
-          <label>First Name: </label> <input className='donInputs' type="text" name="firstname" onChange={handleChange}/><br></br><br/>
-          <label>Last Name: </label> <input className='donInputs' type="text" name="lastname" onChange={handleChange}/><br></br><br/>
-          <label>Email: </label> <input className='donInputs' type="email" name="email" onChange={handleChange}/><br></br><br/>
-          <label>Phone Number: </label> <input className='donInputs' type="number" name="phone_number" onChange={handleChange}/><br/><br/>
-          <label>City: </label> <input className='donInputs' type="text" name="city" onChange={handleChange}/><br></br><br/>
-          <label>State: </label> <input className='donInputs' type="text" name="state" onChange={handleChange}/><br></br><br/>
-          <label>Amount you want to donate{`(in INR)`}:</label> <input className='number' name="amount" onChange={handleChange}/><br/><br/>
+          <nav>First Name: </nav> <input className='donInputs' type="text" name="firstname" onChange={handleChange}/><br></br><br/>
+          <nav>Last Name: </nav> <input className='donInputs' type="text" name="lastname" onChange={handleChange}/><br></br><br/>
+          <nav>Email: </nav> <input className='donInputs' type="email" name="email" onChange={handleChange}/><br></br><br/>
+          <nav>Phone Number: </nav> <input className='donInputs' type="number" name="phone_number" onChange={handleChange}/><br/><br/>
+          <nav>City: </nav> <input className='donInputs' type="text" name="city" onChange={handleChange}/><br></br><br/>
+          <nav>State: </nav> <input className='donInputs' type="text" name="state" onChange={handleChange}/><br></br><br/>
+          <nav>Amount you want to donate{`(in INR)`}:</nav> <input className='number' name="amount" onChange={handleChange}/><br/><br/>
           <button className='donate-submit'type="submit">Submit</button><br></br>
           <nav className='error'>{errorNote}</nav>
       </form>

@@ -3,6 +3,8 @@
     margin: 40px auto;
     padding: 30px;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: "Noto Sans",Arial,Helvetica,sans-serif;
@@ -23,12 +25,13 @@
     font-family: "Noto Sans",Arial,Helvetica,sans-serif;
   }
   
-  .donationForm label {
-    display: block;
-    margin-bottom: 5px;
+.donationForm label {
+    display: flex;
     color: #34495e;
     font-weight: bold;
     font-family: "Noto Sans",Arial,Helvetica,sans-serif;
+    z-index: 1000;
+    margin-top: 90px;
   }
   
   .donInputs, .number {

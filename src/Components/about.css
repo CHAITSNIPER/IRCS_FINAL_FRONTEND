@@ -1,0 +1,65 @@
+/* #003366 */
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-header {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-content {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .about-nav {
+    width: 250px;
+    padding-right: 20px;
+  }
+  
+  .nav-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .nav-button.active {
+    background-color: red;
+    color: white;
+  }
+  
+  .about-main {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    border-left: 1px solid #e0e0e0;
+  }
+
+  h2{
+    color: red;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .h1About {
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  p{
+    font-weight: 550;
+  }
+  
+  /* Add more specific styles as needed */
