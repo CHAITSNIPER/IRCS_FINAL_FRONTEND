@@ -1,11 +1,11 @@
+import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../all.css';
-import map from './images/map.png';
 import { getAllProjects } from '../utils/API-routes';
 import { UserContext } from './context/UserContext';
-import { imagesArray,textArray } from './securit/SlideShow';
-import axios from 'axios';
+import map from './images/map.png';
+import { imagesArray, textArray } from './securit/SlideShow';
 import Loading from './securit/loading';
 
 export default function Home() {
@@ -13,14 +13,17 @@ export default function Home() {
   const { token } = useContext(UserContext);
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading,setLoading] = useState(false);
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     const fetchProjs = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(getAllProjects);
         if (response.data) {
           setProjects(response.data.project);
+          setLoading(false);
         } else {
           console.log('data');
         }
@@ -57,7 +60,7 @@ export default function Home() {
       <section className="projects">
         <h1>OUR PROJECTS</h1>
         <section className="projectArray">
-          {projects.length > 0 ? (
+          {projects.length>0 ? (
             projects.map((items, index) => (
               <nav key={index} className="eachProj">
                 <button className='ProjectButtons' onClick={() => { navigate(`/projects/${items._id}`) }}>{items.title}</button>
@@ -66,7 +69,6 @@ export default function Home() {
           ) : (
             <section>
               <Loading />
-              <nav className='bo'>loading projects</nav>
             </section>
           )}
         </section>

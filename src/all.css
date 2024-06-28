@@ -337,3 +337,23 @@ nav ul li a {
   color: #c0392b;
   border-bottom-color: #c0392b;
 }
+
+@keyframes spin{
+  from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
+.spin{
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border: 8px solid #f3f3f3; 
+            border-top: 8px solid #ff0000; 
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+}
