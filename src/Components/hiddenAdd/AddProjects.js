@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SearchedDonatorDeets, donDetails, postProjects } from '../../utils/API-routes';
+import { SearchedDonatorDeets, deleteDon, donDetails, postProjects } from '../../utils/API-routes';
 import { UserContext } from '../context/UserContext';
 import Loading from '../securit/loading';
 
@@ -83,9 +83,7 @@ export default function AddProjects() {
         }
     }
 
-    useEffect(()=>{
-        fetchDeets();
-    },[]);
+    
 
     const handleSearchBar = async(e)=>{
         const value = e.target.value;
@@ -129,6 +127,29 @@ export default function AddProjects() {
             link.click();
     }
 
+    const handleDelete = async(ind)=>{
+        try{
+        const response = await axios.delete(deleteDon(ind),{
+            'headers':{
+                'Authorization':`Bearer ${token}`
+            }
+        });
+        if(response.data.status===true){
+            console.log('user deleted');
+            setDonDetails(donateDetails.filter((don) => don._id !== ind));
+        }
+        else{
+            console.log('user not deleted');
+        }
+    }catch(error){
+        console.log(error);
+    }
+    }
+
+    useEffect(()=>{
+        fetchDeets();
+    },[]);
+
     return (
         <div className='add-Container'>
             {loading ? <nav className='fe'><Loading/></nav> : (
@@ -150,14 +171,15 @@ export default function AddProjects() {
                     </tr>
                 </thead>
                 <tbody>
-                    {loading2 ? <Loading/>:(donateDetails.map((donator,index)=>(
-                        <tr key={index}>
+                    {loading2 ? <Loading/>:(donateDetails.map((donator)=>(
+                        <tr key={donator._id}>
                             <td>{donator.firstname}</td>
                             <td>{donator.lastname}</td>
                             <td>{donator.email}</td>
                             <td>{donator.phone_number}</td>
                             <td>{donator.time}</td>
                             <td>{donator.amount}</td>
+                            <td><button onClick = {()=>handleDelete(donator._id)}>Delete</button></td>
                         </tr>)
                     ))}
                 </tbody>
