@@ -42,6 +42,23 @@ nav ul li a {
   font-weight: bold;
 }
 
+@keyframes slideLeft{
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight{
+  from {
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
 /* Slideshow Styles */
 .slideshow-container {
   position: relative;
@@ -53,7 +70,16 @@ nav ul li a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+  transition: opacity 0.2s ease-in-out;
+}
+.image-slide.active {
+  opacity: 1;
+}
+.image-slide.slideLeft{
+  animation: slideLeft 0.5s forwards;
+}
+.image-slide.slideRight{
+  animation: slideRight 0.5s backwards;
 }
 
 .text-slide {
@@ -85,6 +111,34 @@ nav ul li a {
   margin-top: -25px;
   padding-bottom: 0.25rem;
   
+}
+
+.MoveAround {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.40;
+  background-color: rgba(94, 94, 94, 0.5);
+  color: white;
+  border: none;
+  font-size: 3rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+  height: 90%;
+}
+
+.MoveAround:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.80;
+}
+
+.MoveAround.le {
+  left: 10px;
+}
+
+.MoveAround.ri {
+  right: 10px;
 }
 
 /* Quote Section */
@@ -183,6 +237,8 @@ nav ul li a {
 .donateButton:hover {
   background-color: #f4f4f4;
 }
+
+
 
 /* Map Section */
 .map {
