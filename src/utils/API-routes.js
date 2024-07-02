@@ -9,4 +9,3 @@ export const DeleteProject = (id) =>`${host}/authenticateRoute/deleteProjects/${
 export const authorizeUser = `${host}/authorizationRoute/AuthProcedure`;
 export const checkNonExpToken = (token)=>`${host}/authorizationRoute/CheckValidity/${token}`;
 export const SearchedDonatorDeets = (value) => `${host}/donators/SearchedDonator/${value}`;
-export const deleteDon = (Id)=> `${host}/authenticateRoute/deleteDonators/${Id}`;
