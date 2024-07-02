@@ -8,6 +8,7 @@ import AddorDelete from './Components/hiddenAdd/AddorDelete.js';
 import DeleteItems from './Components/hiddenAdd/DeleteItems.js';
 import Login from './Components/hiddenAdd/Login.js';
 import LookAround from './TaskBar/LookAround.js';
+import { Projects } from './Components/Projects.js';
 import './all.css';
 import ProjectDeets from './projectFolder/ProjectDeets.js';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path = "/deleteStuff" element ={<DeleteItems/>}/>
         <Route path = "/login" element = {<Login/>} />
         <Route path = '/afterLogin' element = {<AddorDelete/>}/>
+        <Route path = '/ourProjects' element = {<Projects/>}/>
       </Routes>
     </Router>
     </UserProvider>

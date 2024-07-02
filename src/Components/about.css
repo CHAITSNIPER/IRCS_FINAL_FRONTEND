@@ -46,10 +46,10 @@
     border-left: 1px solid #e0e0e0;
   }
 
-  h2{
-    color: red;
+  h3{
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
+    color: rgb(98, 98, 98);
   }
   
   .h1About {

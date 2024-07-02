@@ -1,4 +1,12 @@
 import { Link } from "react-router-dom";
+import './aboutcontent.css'
+
+const tieUps = [
+    {company: "AWMH (ADAMS WYLIE MEMORIAL HOSPITAL)"},
+    {company: 'FIRST AID TRAINING CENTER'},
+    {company: 'PRE-OPERATION DIAGNOSIS'},
+    {company: 'THALASSEMIA'}
+];
 
 export const HistorySection = () => (
     <section>
@@ -89,7 +97,14 @@ During the General Assembly and the council of Delegates in November 2005 at Gen
     <section>
         <h1 className="h1About">We are non-profit organizations. Our charity activities take place all around Mumbai.
         </h1>
-        <p>We Help Lots Of People By Partnering with them</p>
+        <h3>We Help Lots Of People By Partnering with them</h3>
+        <div className="a-grid">
+            {tieUps.map((tie, index) => (
+            <div key={index} className="a-card">
+                <h2>{tie.company}</h2>
+            </div>
+        ))}
+        </div>
     </section>
  )
  

@@ -20,10 +20,10 @@ export const textArray = [
           { header2 : 'WORLD RED CROSS DAY',
             header1 : `Is dedicated to alleviating suffering, upholding dignity,`,
             para: `protecting life, and preventing emergencies.`},
-            { header2 : 'Support flood relief in Assam and Bihar.',
+            { header2 : 'SUPPORT FLOOD RELIEF in Assam and Bihar.',
               header1 : ` thousands of lives displaced and devastated`,
               para: ` Make a difference by lending support to those in dire need`},
-              { header2 : 'Essential health supplies for students',
+              { header2 : 'ESSENTIAL HEALTH SUPPLIES FOR STUDENTS',
                 header1 : `provided schools with hampers of sanitary napkins and`,
                 para: ` Redimmune MV tabs to support student health.`},
               
