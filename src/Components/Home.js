@@ -15,6 +15,7 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading,setLoading] = useState(false);
   const [projects, setProjects] = useState([]);
+  const [direction,setDirection] = useState('right');
 
   useEffect(() => {
     const fetchProjs = async () => {
@@ -40,11 +41,22 @@ export default function Home() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
+      setDirection('right');
       setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesArray.length);
     }, 4000);
 
     return () => clearInterval(intervalId);
   }, [imagesArray.length]);
+
+
+  const handleToggleLeft = ()=>{
+    setDirection('left');
+    setCurrentIndex((currentIndex)=>(currentIndex===0 ? imagesArray.length-1 : currentIndex-1));
+  }
+  const handleToggleRight = ()=>{
+    setDirection('right');
+    setCurrentIndex((currentIndex)=>(currentIndex===imagesArray.length-1 ? 0 : currentIndex+1));
+  }
 
   return (
     <div style={{ minHeight: '130vh' }}>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../all.css';
-import ircs from '../Components/images/logo.png';
 import ig_icon from '../Components/images/instagram-icon.png';
+import ircs from '../Components/images/logo.png';
+import '../all.css';
 export default function LookAround() {
     const location = useLocation();
   
