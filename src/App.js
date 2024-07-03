@@ -2,13 +2,13 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import About from './Components/About';
 import Donate from './Components/Donate.js';
 import Home from './Components/Home';
+import { Projects } from './Components/Projects.js';
 import { UserProvider } from './Components/context/UserContext.js';
 import AddProjects from './Components/hiddenAdd/AddProjects.js';
 import AddorDelete from './Components/hiddenAdd/AddorDelete.js';
 import DeleteItems from './Components/hiddenAdd/DeleteItems.js';
 import Login from './Components/hiddenAdd/Login.js';
 import LookAround from './TaskBar/LookAround.js';
-import { Projects } from './Components/Projects.js';
 import './all.css';
 import ProjectDeets from './projectFolder/ProjectDeets.js';
 
@@ -30,6 +30,7 @@ function App() {
         <Route path = "/login" element = {<Login/>} />
         <Route path = '/afterLogin' element = {<AddorDelete/>}/>
         <Route path = '/ourProjects' element = {<Projects/>}/>
+       
       </Routes>
     </Router>
     </UserProvider>

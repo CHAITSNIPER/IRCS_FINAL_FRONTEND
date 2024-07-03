@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SearchedDonatorDeets, donDetails, postProjects } from '../../utils/API-routes';
+import { SearchedDonatorDeets, deleteDonator, donDetails, postProjects } from '../../utils/API-routes';
 import { UserContext } from '../context/UserContext';
 import Loading from '../securit/loading';
 
@@ -129,6 +129,22 @@ export default function AddProjects() {
             link.click();
     }
 
+    const handleDelete = async(id)=>{
+        try{
+        const response = await axios.delete(deleteDonator(id),{
+            "headers":{
+                'Authorization':`Bearer ${token}`
+            }
+        });
+         
+        if(response.data){
+            setDonDetails((prevDetails) => prevDetails.filter(donor => donor._id !== id));
+        }
+    }catch(error){
+        console.log('error',error);
+    }
+    }
+
     return (
         <div className='add-Container'>
             {loading ? <nav className='fe'><Loading/></nav> : (
@@ -158,6 +174,7 @@ export default function AddProjects() {
                             <td>{donator.phone_number}</td>
                             <td>{donator.time}</td>
                             <td>{donator.amount}</td>
+                            <td><button onClick = {()=>handleDelete(donator._id)}>Delete</button></td>
                         </tr>)
                     ))}
                 </tbody>
