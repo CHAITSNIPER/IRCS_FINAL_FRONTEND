@@ -62,6 +62,12 @@ export default function Home() {
     <div style={{ minHeight: '130vh' }}>
       <section className="slideshow-container">
         <img src={imagesArray[currentIndex]} alt="slideshow" className="image-slide" />
+        <button className="MoveAround le" onClick={handleToggleLeft}>
+          {'<'}
+        </button>
+        <button className="MoveAround ri" onClick={handleToggleRight}>
+          {'>'}
+        </button>
         <div className="text-slide"><h1 className='header2InImage'>{textArray[currentIndex].header2}</h1><h1 className='header1InImage'>{textArray[currentIndex].header1}</h1><p className= 'paraInImage'>{textArray[currentIndex].para}</p></div>
       </section>
 
