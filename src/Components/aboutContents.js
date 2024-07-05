@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './aboutcontent.css'
+import './aboutcontent.css';
 
 const tieUps = [
     {company: "AWMH (ADAMS WYLIE MEMORIAL HOSPITAL)"},
