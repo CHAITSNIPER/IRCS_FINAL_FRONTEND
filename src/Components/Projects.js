@@ -1,10 +1,10 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
-import './projects.css';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import jk from './images/jnk.jpg';
+import hunger from './images/malnutrition.jpeg';
 import toilet from './images/toilets.jpeg';
 import water from './images/water.jpg';
-import hunger from './images/malnutrition.jpeg';
+import './projects.css';
 
 const projectData = [
   { title: "JAMMU & KASHMIR FLOODS", date: "30 January", image: jk, data: 'INR 4,73,000/- was spent in procuring the much needed relief supplies requested for by the Kashmir Red Cross Unit' },
@@ -15,6 +15,12 @@ const projectData = [
 ];
 
 export const Projects = () => {
+  
+  const navigate = useNavigate();
+
+  const handleClick=(index)=>{
+     navigate(`${index}`);
+  }
   return (
     <div className="projects-container">
       <header className="projects-header">
@@ -23,7 +29,7 @@ export const Projects = () => {
       </header>
       <div className="projects-grid">
         {projectData.map((project, index) => (
-          <div key={index} className="project-card">
+          <div key={index} className="project-card" onClick = {()=>handleClick(index)}>
             <img src={project.image} alt={project.title} />
             <h2>{project.title}</h2>
             <p>{project.data}</p>

@@ -5,7 +5,6 @@ import { postDonators } from '../utils/API-routes';
 import { UserContext } from './context/UserContext';
 
 
-
 export default function Donate() {
 
   const [values,setValues] = useState({});
@@ -69,6 +68,9 @@ export default function Donate() {
          console.log('error',error);
          
      }
+
+
+
   }else{
     alert('form not submitted');
   }
