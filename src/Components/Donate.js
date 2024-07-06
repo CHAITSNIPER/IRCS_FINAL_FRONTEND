@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import '../donate.css';
 import { postDonators } from '../utils/API-routes';
 import { UserContext } from './context/UserContext';
-
+import pic from './images/about.jpg'
 
 export default function Donate() {
 
@@ -76,20 +76,46 @@ export default function Donate() {
   }
 }
   return (
-    <div>
-      <form className="donationForm" onSubmit={handleSubmit}>
-        <h1>DONATIONS</h1><br/>
-        <p>Fill the form below</p><br/>
-          <nav>First Name: </nav> <input className='donInputs' type="text" name="firstname" onChange={handleChange}/><br></br><br/>
-          <nav>Last Name: </nav> <input className='donInputs' type="text" name="lastname" onChange={handleChange}/><br></br><br/>
-          <nav>Email: </nav> <input className='donInputs' type="email" name="email" onChange={handleChange}/><br></br><br/>
-          <nav>Phone Number: </nav> <input className='donInputs' type="number" name="phone_number" onChange={handleChange}/><br/><br/>
-          <nav>City: </nav> <input className='donInputs' type="text" name="city" onChange={handleChange}/><br></br><br/>
-          <nav>State: </nav> <input className='donInputs' type="text" name="state" onChange={handleChange}/><br></br><br/>
-          <nav>Amount you want to donate{`(in INR)`}:</nav> <input className='number' name="amount" onChange={handleChange}/><br/><br/>
-          <button className='donate-submit'type="submit">Submit</button><br></br>
-          <nav className='error'>{errorNote}</nav>
-      </form>
+    
+    <div className="donate-page">
+      <div className='header-container'>
+        <img src={pic} className='HeaderImage' alt="IRCS Mumbai Header" />
+        <div className='header-text'>
+          <h1>DONATE TO IRCS MUMBAI</h1>
+        </div>
+    </div>
+
+      <div className="donate-content">
+        <div className="why-donate">
+          <h2>Why Donate to Indian Red Cross Society Mumbai?</h2>
+          <ul>
+            <li>Your donation supports disaster relief efforts across Mumbai and surrounding areas.</li>
+            <li>We provide essential medical services to those in need, regardless of their ability to pay.</li>
+            <li>IRCS Mumbai runs blood donation camps and maintains a blood bank for emergencies.</li>
+            <li>We offer training in first aid and disaster preparedness to communities.</li>
+            <li>Your contribution helps us maintain a network of volunteers ready to respond to crises.</li>
+            <li>IRCS Mumbai supports vulnerable populations through various community health programs.</li>
+            <li>We are a trusted organization with a long history of humanitarian service in Mumbai.</li>
+          </ul>
+          <p>Your donation, no matter how small, makes a significant impact in the lives of those we serve. Join us in our mission to alleviate human suffering and build a more resilient Mumbai.</p>
+        </div>
+
+        <div className="donation-form">
+          <form className="donationForm" onSubmit={handleSubmit}>
+            <h2>MAKE A DONATION</h2>
+            <p>Fill the form below to contribute</p>
+            <input className='donInputs' type="text" name="firstname" placeholder="First Name" onChange={handleChange}/>
+            <input className='donInputs' type="text" name="lastname" placeholder="Last Name" onChange={handleChange}/>
+            <input className='donInputs' type="email" name="email" placeholder="Email" onChange={handleChange}/>
+            <input className='donInputs' type="tel" name="phone_number" placeholder="Phone Number" onChange={handleChange}/>
+            <input className='donInputs' type="text" name="city" placeholder="City" onChange={handleChange}/>
+            <input className='donInputs' type="text" name="state" placeholder="State" onChange={handleChange}/>
+            <input className='donInputs' type="number" name="amount" placeholder="Amount (in INR)" onChange={handleChange}/>
+            <button className='donate-submit' type="submit">DONATE NOW</button>
+            <p className='error'>{errorNote}</p>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }
