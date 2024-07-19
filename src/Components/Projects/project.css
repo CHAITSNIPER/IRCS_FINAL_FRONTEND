@@ -1,67 +1,91 @@
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
 
-  }
-  
-  .card {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 600px;
-    text-align: center;
-  }
-  
-  .header {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .para {
-    font-size: 1.2em;
-    color: #555;
-    line-height: 1.6;
-    font-family: 'Georgia', serif;
-  }
-  .imageInProj{
-    width: 100%;
-    height: 120%;
-    border-radius: 2px;
-  }
+p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
 
-  .para {
-    font-size: 1.2em;
-    color: #555;
-    line-height: 1.6;
-    font-family: 'Georgia', serif;
-    margin-bottom: 15px;
-  }
-  
-  .sub-header {
-    font-size: 1.8em;
-    color: #333;
-    margin: 20px 0 10px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .village-list {
-    font-size: 1.2em;
-    color: #555;
-    line-height: 1.6;
-    font-family: 'Georgia', serif;
-    margin: 10px 0;
-    padding-left: 20px;
-  }
-  
-  .village-list li {
-    margin-bottom: 5px;
-  }
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.header {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.para {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  margin-bottom: 15px;
+}
+
+.imageInProj {
+  width: 100%;
+  height: 120%;
+  border-radius: 2px;
+}
+
+ul {
+  text-align: left;
+}
+
+.sub-header {
+  font-size: 1.8em;
+  color: #333;
+  margin: 20px 0 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.village-list {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.village-list li {
+  margin-bottom: 5px;
+}
+
+.goBack {
+  background-color: #d4187c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  position: sticky;
+  top: 100px;
+  left: 140px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.goBack:hover {
+  background-color: #580521;
+}

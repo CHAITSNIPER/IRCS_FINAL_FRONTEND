@@ -35,6 +35,7 @@
   
   .a-card:hover {
     transform: translateY(-5px);
+    cursor: pointer;
   }
   .a-card img {
     width: 100%;

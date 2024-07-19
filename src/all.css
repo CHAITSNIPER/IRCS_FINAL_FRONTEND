@@ -97,6 +97,7 @@ nav ul li a {
   margin-top: -30px;
   margin-bottom: -25px;
   padding-bottom: 0.10rem;
+  color: white;
 }
 
 .header2InImage {
@@ -110,6 +111,7 @@ nav ul li a {
 .paraInImage {
   margin-top: 10px;
   padding-bottom: 0.25rem;
+  color: rgb(255, 255, 255);
 }
 
 .MoveAround {
@@ -218,6 +220,7 @@ nav ul li a {
   margin: 0 auto 2rem;
   font-family: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet";
   font-weight: 800;
+  color: white;
 }
 
 .donateButton {

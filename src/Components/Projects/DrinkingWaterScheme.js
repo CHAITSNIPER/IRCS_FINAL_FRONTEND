@@ -1,10 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import drws from './images/drws.png';
 import './project.css';
 
 export default function DrinkingWaterScheme() {
+  const navigate = useNavigate();
   return (
+    <div>
+       <button className='goBack' onClick={()=>{navigate('/ourProjects')}}>Go Back</button>
     <div className="container">
+      
       <div className="card">
         <img src= {drws} className='imageInProj'/>
         <h1 className="header">A TRIBAL VILLAGE IN PANVEL</h1>
@@ -32,6 +37,7 @@ export default function DrinkingWaterScheme() {
           Indian Red Cross Society Bombay City Branch has done a wonderful job in providing this basic amenity for the comfort of villagers.
         </p>
       </div>
+    </div>
     </div>
   );
 }
